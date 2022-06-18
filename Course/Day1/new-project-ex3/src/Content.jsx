@@ -1,5 +1,7 @@
 import React from "react";
 
+import '../src/Content.css'
+
 const conteudos = [
     {
       conteudo: 'High Order Functions',
@@ -25,6 +27,7 @@ const conteudos = [
 class Content extends React.Component {
     render() {
         return(
+          <main>
             <div className="content">{conteudos.map((element) => (<div key={element.conteudo} className='card'>
                     <h4>{`O Conteudo é: ${element.conteudo}`}</h4>
                     <p>{`Status: ${element.status}`}</p>
@@ -32,6 +35,7 @@ class Content extends React.Component {
                 </div>
                     ))}
             </div>
+          </main>
         );
     }
 }

@@ -1,0 +1,8 @@
+.footer {
+    background-color: #444;
+    text-align: center;
+}
+
+.footer:hover {
+    background-color: #fff;
+}

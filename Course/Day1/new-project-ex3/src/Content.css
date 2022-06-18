@@ -1,0 +1,13 @@
+.content {
+    margin: auto;
+    background-color: bisque;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    max-width: 50%;
+    border: 1px solid;
+}
+
+.card {
+    text-align: center;
+}
