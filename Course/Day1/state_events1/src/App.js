@@ -6,19 +6,27 @@ class App extends React.Component {
     super()
 
     this.HandleClick1 = this.HandleClick1.bind(this)
-
-    console.log('Comp in Constr..')
+    this.state = {
+      numberClicks: 0
+    }
   }
+
+  // HandleClick1() {
+  //   this.setState({
+  //     numberClicks: 1
+  //   });
+  // }
+
 
   HandleClick1() {
-    console.log(this)
-    console.log('Click 1')
+    this.setState((stateAnt, _props) => ({
+      numberClicks: stateAnt.numberClicks + 1
+    }));
   }
-
   
   render() {
     console.log(this)
-    return <button onClick={this.HandleClick1} className='App'>Click Me</button>
+    return <button onClick={this.HandleClick1} className='App'>{this.state.numberClicks}</button>
   }
 }
 
