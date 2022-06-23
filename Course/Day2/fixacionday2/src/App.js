@@ -9,10 +9,10 @@ class Forms extends React.Component {
 
     this.state = {
       statesFavorite: "",
-      statesInputs: "",
       statesInputsEmail: '',
-      statesInputsCheckBox: '',
+      statesInputs: "",
       statesTextArea: "",
+      statesInputsCheckBox: '',
     };
   }
 
@@ -32,9 +32,8 @@ class Forms extends React.Component {
         <h1>Forms controlled Component</h1>
         <form>
           <fieldset>
-
-          <label>
             <legend>Course</legend>
+            <label>
               <select
                 name="statesFavorite"
                 value={this.state.value}
@@ -51,6 +50,7 @@ class Forms extends React.Component {
           </fieldset>
           <hr />
           <fieldset>
+            <legend>Dados</legend>
             <label>
               Email:
               <input
@@ -62,7 +62,7 @@ class Forms extends React.Component {
             </label>
             <br />
             <label>
-              Comentário:
+              Estado:
               <input type="text"
                 name="statesInputs"
                 value={this.state.statesInputs}
@@ -71,9 +71,12 @@ class Forms extends React.Component {
           </fieldset>
           <hr />
           <fieldset>
-            <br />
+            <legend>Experiência de Course</legend>
             <label>
               <textarea
+                cols='50'
+                rows='10'
+                placeholder="Escreva aqui sobre a experiência na Trybe"
                 name="statesTextArea"
                 value={this.state.statesTextArea}
                 onChange={this.handleInputChange}
