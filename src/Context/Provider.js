@@ -1,7 +1,7 @@
 
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
-import CarsContext from './CarsContext';
+import CarsContext from './Context';
 
 class Provider extends Component {
   constructor(props) {
